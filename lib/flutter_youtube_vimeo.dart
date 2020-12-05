@@ -23,8 +23,8 @@ class YouVimPlayer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String url = provider == 'vimeo'
-        ? 'https://player.vimeo.com/video/$videoID'
-        : 'https://www.youtube.com/embed/$videoID?autoplay=1&mute=1&controls=0&loop=1';
+        ? 'https://player.vimeo.com/video/$videoID?autoplay=1&controls=0&muted=1&loop=1&portrait=false&quality=360p&t=15s&title=0'
+        : 'https://www.youtube.com/embed/$videoID?autoplay=1&mute=1&controls=0&loop=1&start=15&disablekb=1&iv_load_policy=3&modestbranding=1';
     return EasyWebView(
       onLoaded: () {
         print('Loaded video $videoID from provider $provider');
